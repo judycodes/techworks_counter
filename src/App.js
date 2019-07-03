@@ -19,6 +19,10 @@ function App() {
           Learn React
         </a>
       </header>
+
+      <div className="test"></div>
+      let test = document.querySelector(".test");
+      
     </div>
   );
 }
