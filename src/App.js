@@ -1,49 +1,91 @@
-//import React, { Component } from 'react'
-//imrc for react component shortcut through react snippet package
-//imr for react without class components through react snippet package
-//========================================================================
-//Below writes hello world yay! on page 
-//class HelloWorld extends Component {
-//   render() {
-//     return (
-//       <div>Hello World Yay!</div>
-//     )
-//   }
-// }
 
-// export default HelloWorld;
-//always remember to export the class
-//==========================================================================
 import React, { Component } from 'react'
 
 class Counter extends Component {
   constructor () {
     super();
     this.state = {
-      //initalizes counter at zero....colon used with objects
       counter: 0,
-
-
-    }
+      toggle: true,
+      dblOrSingle: 'Change to + / -  2'
+    };
   }
 
+//=======[EVENTS]============
+handleIncrement = () => {//method for button to run when increment button is clicked
+    //state change for incrementing within range max of 20
+    if (this.state.counter < 20) {
+      if (this.state.toggle) {
+        this.setState({ counter: this.state.counter + 1 }); //increments by 1 depending on state of toggle
+      } else {
+        this.setState({ counter: this.state.counter + 2 }); //increments by 2 depending on state of toggle
+      }
+    } else { //state counter is more than twenty causes an alert pops up and resets the state of counter back to zero
+      this.handleReset();
+      alert('Your counter is out of number range! STARTING OVER!');
+    }
+    
+  };
+ 
+ handleDecrement = () => {
+   //state change for incrementing within range min of 0
+  if (this.state.counter > 0) {
+    if (this.state.toggle) {
+      this.setState({ counter: this.state.counter - 1 }); //decrements by 1 depending on state of toggle
+    } else {
+      this.setState({ counter: this.state.counter - 2 }); //decrements by 2 depending on state of toggle
+    }
+  } else { //state counter is less than zero causes an alert pops up and resets the state of counter back to zero
+    this.handleReset();
+    alert('Your counter is out of number range! STARTING OVER!');
+    
+  }
+};
+
+handleReset = () => { //method that causes state of counter to be zero
+    this.setState({
+      counter: 0
+    })
+};
+
+handleToggle = () => { //toggles between incrementing/decrementing by 1 or 2
+  if (this.state.toggle) { //condition is set to this.state.toggle which is initialized at true
+    this.state.toggle = !this.state.toggle; //changes current state of toggle - true/false, true is at increment/decrement of 1, false is at increment/decrement of 2
+     
+    if (this.state.toggle) {
+      this.setState({ dblOrSingle : 'Change to + / -  2'});
+      
+    } else {
+      this.setState({ dblOrSingle : 'Change to + / -  2'});
+    }
+  }
+};
+
+
+//=======[RENDER]============
+
 render() {
-  //shows that the counter is displaying properly at initialized zero
-  console.log("This is line 32 representing state", this.state.counter); 
+  let dblOrSingle;
+
 
   return (
+
     <div className = "container">
-       <div className="navbar">Counter.js</div>
+       <div className="navbar">Keep Count From 0 to 20</div>
        <div className="counter">
-         <h1>What do we put here?</h1>
-         <button type="button">Increment</button>
-         <button type="button">Decrement</button>
+         
+
+         <h1>{this.state.counter}</h1> 
+
+         <button type="button" onClick = {this.handleIncrement}> + </button>
+         <button type="button" onClick = {this.handleDecrement}> - </button>
+         <button type="button" onClick = {this.handleReset}>Reset</button>
+         <button type="button" onClick={this.handleToggle}>{dblOrSingle}</button>
        </div>
     </div>
-  )
+  );
 }
 
 }
 
 export default Counter;
-//alt shift down/up copies current line below or above depending on copy placement desires
