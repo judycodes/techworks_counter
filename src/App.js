@@ -11,7 +11,6 @@ class Counter extends Component {
       counter: 0,
       toggle: true, //initialized at single incremements
       doublesAvailable: true, //incrementing/decrementing by 2 option is available/"true" at initialization
-      oneSheepImg: true
     };
   
   }
@@ -30,7 +29,7 @@ handleIncrement = () => {//method for button to run when increment button is cli
 
     } else { //state counter is more than 20 causes an alert pops up and resets the state of counter back to zero
       this.handleReset();
-      alert('SORRY, YOU DID NOT RAISE ENOUGH SHEEP FOR THIS SLEEPLESS NIGHT! COUNT THEM OVER AGAIN!');
+      alert("SORRY, THERE'S NOT ENOUGH SHEEP FOR THIS SLEEPLESS NIGHT! COUNT THEM OVER AGAIN!");
     }
     
   };
@@ -89,7 +88,7 @@ render() {
             <h1>{this.state.counter}</h1> {/*DISPLAYS CURRENT COUNT*/}
             <div className = "images">
             <div className = "sheepContainer">
-            <img className = "sheep" src={sheep} alt="sheep image"/>
+            <img className = "sheep animateJump" src={sheep} alt="sheep image"/>
             </div>
 
             <img className = "fence" src={fence} alt="fence image"/>
