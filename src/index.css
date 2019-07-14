@@ -20,7 +20,7 @@ body {
   color: #ddddda;
   background-color: #4a707a;
   text-align: center;
-  padding:15px;
+  padding:15px 30px;
   font-variant: small-caps;
   font-size: 2rem;
   border-radius:5px;
@@ -29,33 +29,33 @@ body {
 .componentParts {
   display:flex;
   align-items:center;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .images {
   display:flex;
   flex-direction:column;
   justify-content: space-around;
-  padding:20px;
-  margin: 20px;
-  flex-grow:2;
+  padding: 10px;
+  margin: 30px;
+  flex-grow:3;
 }
 
 .images img {
-  height: 100px;
-  width:100px;
+  height: 80px;
+  width: 80px;
 }
 
 .sheep {
-  transform: rotate(-40deg); /*tilts sheep - prepares for jump*/
-  transform-origin: center bottom;
+  transform: rotate(-20deg); /*tilts sheep - prepares for jump*/
+  transform-origin: bottom center;
   animation: jump 3s ease-in-out 1;
 }
 
 @keyframes jump {
   0% {
-    transform: rotate(-40deg);
-    opacity:1;
+    transform: rotate(-30deg);
+    opacity:0.9;
   }
 
   50% {
@@ -67,15 +67,23 @@ body {
   }
 
   80% {
-    opacity:0.4;
+    opacity:0.3;
+  }
+
+  950% {
+    opacity:0.03;
   }
 
   100% {
-    transform: rotate(40deg);
-    opacity:0.1;
+    transform: rotate(40deg) translateX(60px);
+    opacity:0;
   }
 }
 
+.fence {
+  margin-top: 15px;
+  transform: skewY(-20deg);
+}
 
 .counter {
   display: flex;
@@ -88,6 +96,37 @@ body {
 .counter h1 {
   color: #c2c8c5;
   font-size: 4rem;
+  padding: 50px 20px;
+}
+
+.countTracker {
+  display:flex;
+  align-items:center;
+}
+
+.sheepCount {
+  height: 100px;
+  width:100px;
+  margin-left:20px;
+  animation: tilt 2s ease infinite;
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-3deg);
+  }
+
+  75% {
+    transform: rotate(3deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .buttonWrapper {

@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import sheep from "./sheep.png";
+import fence from "./fence.png";
 
 class Counter extends Component {
   constructor () {
@@ -87,8 +88,10 @@ render() {
         <div className= "componentParts">
 
           <div className="counter"> {/* COUNTER COMPONENT WRAPPER*/}
-            
+            <div class="countTracker">
             <h1>{this.state.counter}</h1> {/*DISPLAYS CURRENT COUNT*/}
+            <img className= "sheepCount" src={sheep} alt="sheep image"/>
+            </div>
 
             <div className="buttonWrapper">
 
@@ -109,7 +112,7 @@ render() {
             <img className = "sheep" src={sheep} alt="sheep image"/>
             </div>
 
-            <img className = "fence" src="" alt="fence image"/>
+            <img className = "fence" src={fence} alt="fence image"/>
 
           </div>
 
