@@ -88,10 +88,10 @@ render() {
             <h1>{this.state.counter}</h1> {/*DISPLAYS CURRENT COUNT*/}
             <div className = "images">
             <div className = "sheepContainer">
-            <img className = "sheep animateJump" src={sheep} alt="sheep image"/>
+            <img className = "sheep animateJump" src={sheep} alt="sheep"/>
             </div>
 
-            <img className = "fence" src={fence} alt="fence image"/>
+            <img className = "fence" src={fence} alt="fence"/>
 
           </div>
             </div>
