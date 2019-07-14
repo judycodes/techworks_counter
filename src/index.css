@@ -2,7 +2,7 @@ body {
   overflow: hidden;
   width:100vw;
   height: 100vh;
-  background-color: rgba(221, 221, 218, 0.3);
+  background-color: rgba(118, 151, 160, 0.3);
   display:flex;
   flex-direction:column;
   justify-content: center;
@@ -12,11 +12,16 @@ body {
 .container {
   width:100%;
   height: 100%;
+  background-color: rgba(74, 112, 122, 0.2);
+  padding:20px 20px 0px;
+  box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+  border-radius: 5px;
 }
 
 .navbar {
   max-height: 10%;
   min-height: 40px;
+  width:80%;
   color: #ddddda;
   background-color: #4a707a;
   text-align: center;
@@ -24,12 +29,6 @@ body {
   font-variant: small-caps;
   font-size: 2rem;
   border-radius:5px;
-}
-
-.componentParts {
-  display:flex;
-  align-items:center;
-  justify-content: space-around;
 }
 
 .images {
@@ -94,7 +93,7 @@ body {
 }
 
 .counter h1 {
-  color: #c2c8c5;
+  color: rgba(255,255,255,0.8);
   font-size: 4rem;
   padding: 50px 20px;
 }
@@ -104,31 +103,6 @@ body {
   align-items:center;
 }
 
-.sheepCount {
-  height: 100px;
-  width:100px;
-  margin-left:20px;
-  animation: tilt 2s ease infinite;
-}
-
-@keyframes tilt {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  50% {
-    transform: rotate(-3deg);
-  }
-
-  75% {
-    transform: rotate(3deg);
-  }
-
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
 .buttonWrapper {
   display:flex;
   justify-content:space-evenly;
@@ -136,14 +110,14 @@ body {
 }
 
 .buttonWrapper button {
-  padding: 3em;
+  padding: 1em;
   background-color: #4a707a;
   color: #ddddda;
   border: none;
   margin:10px 10px;
   transition: all 1s ease;
   outline: none;
-  font-size: 0.8rem;
+  font-size: 1rem;
   border-radius:5px;
 }
 

@@ -82,15 +82,19 @@ render() {
   return (
 
     <div className = "container"> 
-
-      <div className="navbar">count sheep</div>  {/* COMPONENT TITLE */}
-      
-        <div className= "componentParts">
-
           <div className="counter"> {/* COUNTER COMPONENT WRAPPER*/}
+          <div className="navbar">count sheep</div>  {/* COMPONENT TITLE */}
+
             <div class="countTracker">
             <h1>{this.state.counter}</h1> {/*DISPLAYS CURRENT COUNT*/}
-            <img className= "sheepCount" src={sheep} alt="sheep image"/>
+            <div className = "images">
+            <div className = "sheepContainer">
+            <img className = "sheep" src={sheep} alt="sheep image"/>
+            </div>
+
+            <img className = "fence" src={fence} alt="fence image"/>
+
+          </div>
             </div>
 
             <div className="buttonWrapper">
@@ -101,23 +105,15 @@ render() {
 
               <button type="button" className = "zeroBtn" onClick = {this.handleReset}>Reset</button> {/* Resets counter count to zero */}
 
-              <button type="button" className = "toggleBtn" onClick={this.handleToggle}>{this.state.doublesAvailable ? "Change" : "Back"}</button> {/* Allows toggle between adding/subtracting by 1 or 2 */}
+              <button type="button" className = "toggleBtn" onClick={this.handleToggle}>{this.state.doublesAvailable ? "Double Your Sheep" : "Back to One Sheep"}</button> {/* Allows toggle between adding/subtracting by 1 or 2 */}
 
             </div>
 
           </div>
 
-          <div className = "images">
-            <div className = "sheepContainer">
-            <img className = "sheep" src={sheep} alt="sheep image"/>
-            </div>
-
-            <img className = "fence" src={fence} alt="fence image"/>
-
-          </div>
+          
 
       </div> 
-    </div>
   );
 }
 
