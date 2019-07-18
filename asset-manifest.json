@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/techworks_counter/static/css/main.39c088e5.chunk.css",
+    "main.js": "/techworks_counter/static/js/main.50f9b838.chunk.js",
+    "main.js.map": "/techworks_counter/static/js/main.50f9b838.chunk.js.map",
+    "runtime~main.js": "/techworks_counter/static/js/runtime~main.592e9664.js",
+    "runtime~main.js.map": "/techworks_counter/static/js/runtime~main.592e9664.js.map",
+    "static/js/2.b7f52e28.chunk.js": "/techworks_counter/static/js/2.b7f52e28.chunk.js",
+    "static/js/2.b7f52e28.chunk.js.map": "/techworks_counter/static/js/2.b7f52e28.chunk.js.map",
+    "index.html": "/techworks_counter/index.html",
+    "precache-manifest.ba822da3d3a86716d505be9659f33850.js": "/techworks_counter/precache-manifest.ba822da3d3a86716d505be9659f33850.js",
+    "service-worker.js": "/techworks_counter/service-worker.js",
+    "static/css/main.39c088e5.chunk.css.map": "/techworks_counter/static/css/main.39c088e5.chunk.css.map",
+    "static/media/fence.png": "/techworks_counter/static/media/fence.2e2afe49.png",
+    "static/media/sheep.png": "/techworks_counter/static/media/sheep.f9711231.png"
+  }
+}
