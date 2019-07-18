@@ -11,6 +11,7 @@ class Counter extends Component {
       counter: 0,
       toggle: true, //initialized at single incremements
       doublesAvailable: true, //incrementing/decrementing by 2 option is available/"true" at initialization
+      sheep: false //sheep jumping is initialized as false, once true, the sheep will jump 
     };
   
   }
@@ -22,7 +23,7 @@ handleIncrement = () => {//method for button to run when increment button is cli
     if (this.state.counter < 20) { //if state counter is less than 20, allow incrementing 
     
       if (this.state.toggle) {
-        this.setState({ counter: this.state.counter + 1 }); //increments by 1 depending on state of toggle
+        this.setState({ counter: this.state.counter + 1}); //increments by 1 depending on state of toggle
       } else {
         this.setState({ counter: this.state.counter + 2 }); //increments by 2 depending on state of toggle
       }
@@ -40,7 +41,8 @@ handleDecrement = () => {
   if (this.state.counter > 0) { //if state counter is more than 0, allow decrementing
 
     if (this.state.toggle) {
-      this.setState({ counter: this.state.counter - 1 }); //decrements by 1 depending on state of toggle
+      this.setState({ counter: this.state.counter - 1}); //decrements by 1 depending on state of toggle
+    
     } else {
       this.setState({ counter: this.state.counter - 2}); //decrements by 2 depending on state of toggle
     }
@@ -67,6 +69,7 @@ handleToggle = () => { //toggles between incrementing/decrementing by 1 or 2 and
       return {doublesAvailable: !prevState.doublesAvailable, //changes state properties and shows what option is available on toggle button: 
         //if toggle button displays 'change to + / - 2', then counter is incrementing/decrementing by 1, if it displays 'back to 1', then counter is incrementing/decrementing by 2
       toggle : !prevState.toggle}; //toggles between which increment/decrement option is available
+        
     });
     //when toggle button is pressed/clicked, the state properties are changed to false
     //so toggle initalized as true and incrementing/decrementing by 1, now is false and increments/decrements by 2
@@ -78,6 +81,8 @@ handleToggle = () => { //toggles between incrementing/decrementing by 1 or 2 and
 //=======[RENDER]============
 
 render() {
+
+
   return (
 
     <div className = "container"> 
@@ -88,7 +93,7 @@ render() {
             <h1>{this.state.counter}</h1> {/*DISPLAYS CURRENT COUNT*/}
             <div className = "images">
             <div className = "sheepContainer">
-            <img className = "sheep animateJump" src={sheep} alt="sheep"/>
+            <img className = "animateJump" src={sheep} alt="sheep"/>
             </div>
 
             <img className = "fence" src={fence} alt="fence"/>
